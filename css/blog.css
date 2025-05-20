@@ -1,0 +1,55 @@
+/*  Blog-only overrides (scoped by .blog-page on <body>)  */
+.blog-page .blog-hero {
+  background: #fff9e5;
+  padding: 2.5rem 0 2rem;
+  text-align: center;
+}
+.blog-page .blog-hero h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #f8b400;
+  line-height: 1.3;
+}
+.blog-page .banner-img {
+  width: 100%;
+  max-height: 40vh;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+
+.blog-page .blog-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+  line-height: 1.7;
+}
+.blog-page .blog-container h2   { margin-top: 2.5rem; font-size: 1.6rem; color:#333; }
+.blog-page .blog-container h3   { margin-top: 2rem;  font-size: 1.25rem; color:#f8b400; }
+.blog-page .blog-container p    { margin: 1rem 0;    font-size: 1rem; }
+
+/* responsive table inside article */
+.blog-page .blog-container table        { width:100%; border-collapse:collapse; margin:1.5rem 0; }
+.blog-page .blog-container th,
+.blog-page .blog-container td           { border:1px solid #ddd; padding:.75rem; text-align:left; }
+.blog-page .blog-container th           { background:#fff9e5; font-weight:600; color:#333; }
+
+@media (max-width:600px) {
+  .blog-page .blog-hero h1 { font-size:1.6rem; }
+  .blog-page .blog-container table,
+  .blog-page .blog-container thead,
+  .blog-page .blog-container tbody,
+  .blog-page .blog-container th,
+  .blog-page .blog-container td,
+  .blog-page .blog-container tr { display:block; }
+  .blog-page .blog-container th { position:absolute; top:-9999px; left:-9999px; }
+  .blog-page .blog-container td { border:none; position:relative; padding-left:50%; white-space:pre-wrap; }
+  .blog-page .blog-container td:before {
+    content:attr(data-label);
+    position:absolute; left:0; width:45%; padding-left:1rem; font-weight:700; color:#333;
+  }
+}

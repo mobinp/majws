@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Agile Journey with Scrum</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    function updateCountdown() {
+        const launchDate = new Date("June 15, 2025 00:00:00").getTime();
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            document.getElementById("countdown").innerHTML = "Launched!";
+        }
+    }
+
+    function openModal() {
+      document.getElementById("modal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    setInterval(updateCountdown, 1000);
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <img src="images/cover.jpg" alt="Book Cover" />
+      <div class="hero-text">
+        <h1>My Agile Journey with Scrum</h1>
+        <p>Understand Scrum principles as they unfold naturally in a fictional tale of transformation and teamwork.</p>
+        <p id="countdown" class="countdown"></p>
+        <button class="btn" onclick="openModal()">Notify Me</button>
+      </div>
+    </div>
+  </header>
+<section class="whats-inside">
+  <h2>What’s Inside</h2>
+  <div class="features">
+    <div class="feature-box">
+      <img src="images/icon-scrum.png" alt="Scrum Essentials Icon">
+      <h3>Scrum Essentials</h3>
+      <p>Key concepts and roles explained in an engaging story format</p>
+    </div>
+    <div class="feature-box">
+      <img src="images/icon-experience.png" alt="Experience Icon">
+      <h3>Real-World Experience</h3>
+      <p>Insights from protagonist’s journey in applying Scrum practices</p>
+    </div>
+    <div class="feature-box">
+      <img src="images/icon-tips.png" alt="Tips Icon">
+      <h3>Practical Tips</h3>
+      <p>Actionable advice for Scrum Masters and Agile teams</p>
+    </div>
+  </div>
+</section>
+  <section class="about-book">
+    <h2>Book Blurb</h2>
+    <p>Apeiron Solutions, once among the top emerging IT companies, is now struggling to retain customers and stay afloat. Its employees are frustrated with a crippling workload and unrealistic expectations.
+The last hope for its turnaround is the Mercury project. They must adopt Scrum, an Agile framework, to execute the project.<br/>
+As the team matures with its understanding of Scrum, productivity increases, and optimism returns.
+Will that help the team successfully execute the project and bring Apeiron Solutions out of crisis?</p>
+<p>The objective of this novel is to help readers – be they developers, testers, project managers, team leaders, or Agile enthusiasts – learn the principles and practices of Scrum in an engaging, practical way.
+It does not matter if you are new to Scrum, seeking to enhance your Scrum skills, or just want to read an engaging story of a bunch of techies; this book offers valuable insights woven into an unforgettable narrative.
+</p>
+  </section>
+  <section class="about-author">
+    <h2>About the Author</h2>
+	 <div class="author-content">
+	<div class="author-text">
+    <p>Mobin Purushothaman is a software professional with over 20 years of experience in the IT industry. He started as a software developer and went on to play the roles of Project Manager and Scrum Master. 
+	<br/>He has worked with organisations ranging from agile startups to multinational companies and is passionate about building and mentoring high-performance teams. He has spent over a decade practising and preaching Scrum and other Agile frameworks.
+With hands-on experience in the subject, his writing blends practical examples and theories in fiction to create characters and scenarios relatable to readers. 
+</p>
+<p>In this novel, his focus is to ensure readers enjoy a compelling narrative and get valuable lessons about the Scrum framework in a relatable and engaging way.
+Outside of his current work at a leading software service company in Bangalore, he enjoys travelling and photography.
+</p>
+ </div>
+    <div class="author-image">
+    <img src="images/author.jpg" alt="Author Illustration" />
+	    </div>
+  </div>
+  </section>
+
+  <section class="blog">
+    <h2>Latest Updates</h2>
+    <ul>
+      <li><a href="#">How Agile Changed the Game for One Team</a></li>
+      <li><a href="#">Behind the Scenes: Writing Agile Fiction</a></li>
+      <li><a href="#">Top 5 Scrum Myths Debunked</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mobin P. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYnAxs5Uy-jLo21I_hpQH1JKzmwaVx8bZw9TLp7scSWmh-zw/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
+</body>
+</html>
