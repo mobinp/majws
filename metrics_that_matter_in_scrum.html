@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metrics That Matter in Scrum (and Ones to Avoid)</title>
+  <meta name="description" content="Role-based guide to meaningful Scrum metrics for Product Owners, Development Teams, and Scrum Masters—plus which measurements to avoid." />
+  <!-- Re‑use global & blog‑specific styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W8BX08NS1E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W8BX08NS1E');
+</script>
+</head>
+<body class="blog-page">
+
+  <!-- Hero Banner -->
+  <header class="blog-hero">
+  <nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blogs.html" class="active">Blog</a></li>
+  </ul>
+</nav>
+ <img src="images/metrics.png" alt="Metrics That Matter in Scrum illustration" class="banner-img" />
+    <h1>Metrics That Matter in Scrum (&mdash;and Ones to Avoid)</h1>
+  </header>
+
+  <!-- Main Article -->
+  <article class="blog-container">
+    <p><em>A role-based, practical guide for Product Owners, Development Teams, and Scrum Masters</em></p>
+
+    <h2>Introduction &ndash; Why We Measure</h2>
+    <p>Scrum runs on empiricism: <strong>transparency &rarr; inspection &rarr; adaptation</strong>. Metrics supply the transparency. They are signals&mdash;never verdicts&mdash;that help everyone see reality more clearly, discuss it openly, and decide what to change next. When chosen with care, metrics illuminate value delivery, product quality, and team health; when chosen poorly, they distort behaviour, create vanity contests, or encourage cargo-cult &ldquo;performance&rdquo; games.</p>
+    <p>Because each Scrum role serves a different purpose, the same number can be gold for one audience and toxic for another. A Product Owner (PO) cares about business value and stakeholder confidence, the Development Team needs flow and technical quality, and the Scrum Master (SM) protects team health and the empirical process itself.</p>
+    <p>This article explores metrics from <strong>three angles</strong>, spelling out:</p>
+    <ol>
+      <li><strong>What the metric is</strong>&mdash;a concise definition.</li>
+      <li><strong>Why it helps</strong> (or hurts) each role.</li>
+      <li>Practical tips for keeping the data honest and useful.</li>
+    </ol>
+    <p>Use this as a menu, not a mandate. Scrum never prescribes specific numbers; good teams evolve a lightweight dashboard and retire anything that stops sparking worthwhile conversation.</p>
+
+    <!-- Product Owner Section -->
+    <h2>1&nbsp;| Product Owner Perspective: Tracking Business Value</h2>
+    <p>The Product Owner is accountable for <strong>maximising product value</strong>. Outcome, not output, is their north star. The following metrics do two things: they expose how quickly valuable work reaches users, and they reveal whether that work actually solves customer problems.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Definition</th>
+          <th>Why They Help</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Metric"><strong>Lead Time</strong></td>
+          <td data-label="Definition">Elapsed time from backlog request to production release.</td>
+          <td data-label="Why They Help">Long lead times hide bottlenecks; short, predictable lead times reassure stakeholders.</td>
+        </tr>
+        <tr>
+          <td data-label="Metric"><strong>Sprint Goal Success Rate</strong></td>
+          <td data-label="Definition">Percentage of Sprints whose stated Goal is fully met.</td>
+          <td data-label="Why They Help">Keeps focus on outcomes aligned to strategy, not ticket counts.</td>
+        </tr>
+        <tr>
+          <td data-label="Metric"><strong>Escaped Defects</strong></td>
+          <td data-label="Definition">Bugs found by users after release, tracked per Sprint.</td>
+          <td data-label="Why They Help">Quality is inseparable from value; rising defects erode trust.</td>
+        </tr>
+        <tr>
+          <td data-label="Metric"><strong>Customer Satisfaction / NPS</strong></td>
+          <td data-label="Definition">Customer feedback score (e.g.&nbsp;Net Promoter Score).</td>
+          <td data-label="Why They Help">Validates whether increments solve real user problems.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Metrics to Handle With Care</h3>
+    <ul>
+      <li><strong>Story Points Delivered per Sprint</strong> &ndash; Forecast capacity; don&rsquo;t treat as value currency.</li>
+      <li><strong>Deadline Compliance&nbsp;%</strong> &ndash; Encourages fixed-scope thinking and discourages agility.</li>
+    </ul>
+
+    <!-- Development Team Section -->
+    <h2>2&nbsp;| Development Team Perspective: Flow, Quality, Sustainability</h2>
+    <p>Developers turn backlog items into a <em>Done</em> increment every Sprint. Flow efficiency and code health tell them whether that engine is humming or grinding.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Definition</th>
+          <th>Why They Help</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Metric"><strong>Cycle Time</strong></td>
+          <td data-label="Definition">Time from work start to <em>Done</em> for each item.</td>
+          <td data-label="Why They Help">Short cycles surface blockers early and foster fast feedback.</td>
+        </tr>
+        <tr>
+          <td data-label="Metric"><strong>Work Item Age</strong></td>
+          <td data-label="Definition">How long each in-progress item has been open.</td>
+          <td data-label="Why They Help">Flags stalled work for immediate Daily Scrum attention.</td>
+        </tr>
+        <tr>
+          <td data-label="Metric"><strong>Defect Remediation Time</strong></td>
+          <td data-label="Definition">Average time from defect report to verified fix.</td>
+          <td data-label="Why They Help">Long delays hide quality issues and drain morale.</td>
+        </tr>
+        <tr>
+          <td data-label="Metric"><strong>Technical-Debt Indicators</strong></td>
+          <td data-label="Definition">Signals like code complexity, duplication, outdated libraries.</td>
+          <td data-label="Why They Help">Makes invisible entropy visible so the team can plan refactors.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Metrics to Avoid or Decouple From Performance</h3>
+    <ul>
+      <li><strong>Lines of Code</strong> &ndash; Rewards verbosity, punishes refactoring.</li>
+      <li><strong>Velocity Leaderboards</strong> &ndash; Every team&rsquo;s point scale is unique; comparison invites gaming.</li>
+    </ul>
+
+    <!-- Scrum Master Section -->
+    <h2>3&nbsp;| Scrum Master Perspective: Team Health &amp; Continuous Improvement</h2>
+    <p>The Scrum Master serves the team and organisation by <strong>enabling self-management and removing impediments</strong>. Their metrics are coaching mirrors—never hammers.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Definition</th>
+          <th>Why They Help</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Metric"><strong>Team Happiness / Engagement Index</strong></td>
+          <td data-label="Definition">Simple 1–5 survey each Sprint.</td>
+          <td data-label="Why They Help">Early-warning siren for morale and psychological safety.</td>
+        </tr>
+        <tr>
+          <td data-label="Metric"><strong>Retrospective Action Follow-Through Rate</strong></td>
+          <td data-label="Definition">Ratio of improvement actions completed vs committed.</td>
+          <td data-label="Why They Help">Keeps continuous improvement real and visible.</td>
+        </tr>
+        <tr>
+          <td data-label="Metric"><strong>WIP vs Policy</strong></td>
+          <td data-label="Definition">How often the team breaches its stated WIP limits.</td>
+          <td data-label="Why They Help">Chronic breaches expose multitasking or unclear priorities.</td>
+        </tr>
+        <tr>
+          <td data-label="Metric"><strong>Burndown / Burn-up Pattern Analysis</strong></td>
+          <td data-label="Definition">Qualitative look at chart shape across Sprints.</td>
+          <td data-label="Why They Help">Patterns reveal oversized stories or late scope changes.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Metrics to Handle With Care</h3>
+    <ul>
+      <li><strong>Individual Utilisation</strong> &ndash; 100&nbsp;% busy-ness kills learning and quality.</li>
+      <li><strong>Meeting Count/Duration</strong> &ndash; Fewer meetings ≠ better communication.</li>
+    </ul>
+
+    <!-- Conclusion -->
+    <h2>Conclusion &ndash; Keeping a Living Dashboard</h2>
+    <p>In Scrum, <strong>metrics are conversation starters, not report cards</strong>. When Product Owners track value, Development Teams watch flow and quality, and Scrum Masters nurture team health, the whole system aligns around empiricism. The litmus test for any metric is simple: <em>Does it help us make a better decision today?</em></p>
+    <p>Keep your dashboard small, visible, and adaptable. Review it in every Retrospective; pair numbers with human insight; and drop vanity metrics before they become dogma. Measure what matters, ignore what distracts&mdash;and let transparency, inspection, and adaptation do the rest.</p>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <p>📘 Enjoy practical Scrum insights like this? <a href="https://myagilejourneywithscrum.com" target="_blank" rel="noopener">Check out my upcoming book <em>My Agile Journey with Scrum</em></a> and join the notification list for exclusive launch bonuses!</p>
+    </section>
+  </article>
+
+</body>
+</html>

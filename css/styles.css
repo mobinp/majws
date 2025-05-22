@@ -214,3 +214,7 @@ footer {
         font-size: 0.95rem;
         color: #555;
     }
+nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
