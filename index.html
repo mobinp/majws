@@ -75,6 +75,21 @@ It does not matter if you are new to Scrum, seeking to enhance your Scrum skills
 </p>
  <a class="btn" href="buy.html" >Buy Now</a>
   </section>
+<section class="sneak-peek">
+  <div class="container">
+    <h2>Sneak Peek — Videos from the Book</h2>
+
+    <div class="videos-row" id="videosRow">
+      <!-- JS will inject the videos here -->
+    </div>
+
+    <div class="videos-more">
+      <a class="btn" id="moreVideosBtn" href="https://www.youtube.com/@myagilejourney/shorts" target="_blank" rel="noopener">
+        More..
+      </a>
+    </div>
+  </div>
+</section>
 <section class="whats-inside">
   <h2 style="text-align:center;">What’s Inside</h2>
   <div class="features-container">
@@ -163,5 +178,68 @@ It does not matter if you are new to Scrum, seeking to enhance your Scrum skills
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYnAxs5Uy-jLo21I_hpQH1JKzmwaVx8bZw9TLp7scSWmh-zw/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
   </div>
+  <script>
+(function(){
+  // Replace these with your real YouTube video IDs.
+  // desktopVideoIds are regular watch videos (e.g. "dQw4w9WgXcQ")
+  // shortsVideoIds are the same videos' short IDs if you created separate short files (or same IDs can be used with /shorts/).
+  const desktopVideoIds = ["HwfIXshDlbo",  "y6DEF9QugUo",  "lF3gqfkOdPg","GNtmkfMYNjs"];
+  const shortsVideoIds  = ["HwfIXshDlbo",  "y6DEF9QugUo",  "lF3gqfkOdPg","GNtmkfMYNjs"];
+
+  // how many cards to show (2 or 3)
+  const cardsToShow = Math.min(3, desktopVideoIds.length, shortsVideoIds.length);
+
+  const videosRow = document.getElementById("videosRow");
+  const moreBtn = document.getElementById("moreVideosBtn");
+  if(moreBtn){
+    moreBtn.href = "https://www.youtube.com/@YourChannel"; // <-- update to your channel or page
+  }
+
+  function createCard(embedHtml, caption){
+    const card = document.createElement("div");
+    card.className = "video-card";
+    card.innerHTML = embedHtml + '<div class="video-caption">'+(caption||'')+'</div>';
+    return card;
+  }
+
+  function buildEmbeds(isDesktop){
+    videosRow.innerHTML = ""; // clear existing
+    for(let i=0;i<cardsToShow;i++){
+      const id = isDesktop ? desktopVideoIds[i] : shortsVideoIds[i];
+      // if id missing, skip
+      if(!id) continue;
+
+      // Use YouTube iframe embed:
+      // Desktop: embed as standard watch embed (www.youtube.com/embed/VIDEO_ID).
+      // Shorts: embed via /shorts/VIDEO_ID (works in iframe like regular)
+      const src = isDesktop ? 
+        ("https://www.youtube.com/embed/" + id + "?rel=0") :
+        ("https://www.youtube.com/embed/" + id + "?rel=0"); // if your shorts require different URL, adjust to "https://www.youtube.com/shorts/ID?..." — many embeds still work via /embed/ID
+
+      // create iframe (responsive by card width)
+      const iframe = '<iframe class="video-frame" src="'+src+'" title="Sneak peek video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      const caption = isDesktop ? "Watch: Preview video " + (i+1) : "Short: Preview " + (i+1);
+      const card = createCard(iframe, caption);
+      videosRow.appendChild(card);
+    }
+  }
+
+  // media query breakpoint - treat desktop at width >= 768px
+  const mq = window.matchMedia("(min-width:768px)");
+  function handleChange(e){
+    buildEmbeds(e.matches); // matches == true means desktop
+  }
+
+  // initial build
+  handleChange(mq);
+  // listen for changes (user resizes)
+  if(mq.addEventListener){
+    mq.addEventListener("change", handleChange);
+  }else if(mq.addListener){
+    mq.addListener(handleChange);
+  }
+})();
+</script>
+
 </body>
 </html>
